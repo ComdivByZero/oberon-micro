@@ -1,0 +1,164 @@
+snippet M
+	MOD
+
+snippet MOD
+	MODULE ${1:name};
+
+	IMPORT Out;
+
+	CONST
+
+	TYPE
+
+	VAR
+
+	END ${1:name}.
+
+snippet P
+	PROCEDURE
+
+snippet PROCEDURE
+	PROCEDURE ${1}*(${2});
+	VAR
+	BEGIN
+	  ${3}
+	END ${1};
+
+snippet PR
+	PROCEDURE ${1}*(${2}): ${3};
+	VAR
+	BEGIN
+	  ${4}
+	RETURN
+	  ${5}
+	END ${1};
+
+snippet FN
+	PROCEDURE ${1}*(${2}): ${3};
+	RETURN
+	  ${4}
+	END ${1};
+
+snippet PG
+	PROCEDURE Go*;
+	VAR
+	BEGIN
+	  ${1}
+	END Go;
+
+snippet V
+	VAR
+
+snippet BE
+	BEGIN
+
+snippet F
+	FALSE
+
+snippet T
+	TRUE
+
+snippet B
+	BOOLEAN
+
+snippet C
+	CHAR
+
+snippet I
+	INTEGER
+
+snippet A
+	ARRAY ${1}OF ${2}
+
+snippet AC
+	ARRAY ${1}OF CHAR;
+
+snippet PO
+	POINTER TO
+
+snippet TO
+	TO RECORD
+	  ${0}
+	END;
+
+snippet REC
+	RECORD
+	  ${0}
+	END;
+
+snippet FO
+	FOR i := ${1:init} TO ${2:last} DO
+	  ${3}
+	END;
+
+snippet CA
+	CASE ${1} OF
+	  ${2}:
+		${3}
+	| ${4}:
+		${5}
+	END;
+
+snippet IF
+	IF ${1} THEN
+	  ${2}
+	END;
+
+snippet E
+	ELSE
+
+snippet ELSE
+	ELSIF ${1} THEN
+	  ${2}
+
+snippet W
+	WHILE ${0} DO
+	  ${1}
+	END;
+
+snippet REP
+	REPEAT
+	  ${1}
+	UNTIL ${2};
+
+snippet U
+	UNTIL ${1};
+
+snippet AS
+	ASSERT(${1});
+
+snippet OS
+	Out.String(${1});
+
+snippet OI
+	Out.Int(${1}, 0);
+
+snippet OR
+	Out.Real(${1}, 0);
+
+snippet OC
+	Out.Char(${1});
+
+snippet OL
+	Out.Ln;
+
+snippet IS
+	In.String(${1});
+
+snippet II
+	In.Int(${1});
+
+snippet IR
+	In.Real(${1});
+
+snippet IC
+	In.Char(${1});
+
+snippet ID
+	In.Done
+
+snippet IO
+	In.Open;
+	IF In.Done THEN
+	  ${1}
+	END;

@@ -1,0 +1,17 @@
+filetype: oberon
+
+detect:
+    filename: "\\.mod$|\\.Mod$|\\.ob$|\\.ob7$|\\.o7|\\.ob07$|\\.cp$|\\.o2"
+
+rules:
+    - constant.string:
+        start: "\""
+        end: "\""
+        skip: "\\\\."
+        rules:
+            - constant.specialChar: "\\\\."
+
+    - comment:
+        start: "\\(\\*"
+        end: "\\*\\)"
+        rules:  []
